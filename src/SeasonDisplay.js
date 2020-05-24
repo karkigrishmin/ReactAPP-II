@@ -22,6 +22,7 @@ const getSeason = (lat, month) => {
   }
 };
 
+//react component
 const SeasonDisplay = (props) => {
   const season = getSeason(props.lat, new Date().getMonth());
 
