@@ -1,0 +1,41 @@
+/* modifying SeasonDisplay */
+
+.wrapper {
+  padding: 1rem;
+  text-align: center;
+}
+
+.summer {
+  background-color: orange;
+  height: 100vh;
+}
+.winter {
+  background-color: aliceblue;
+  height: 100vh;
+}
+
+h1 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.icon-left {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
+
+.icon-right {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+}
+
+.wrapper.summer i {
+  color: red;
+}
+.wrapper.winter i {
+  color: blue;
+}
