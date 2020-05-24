@@ -9,18 +9,22 @@ import SeasonDisplay from "./SeasonDisplay";
 
 //Class component
 class App extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = { lat: null, errMessage: "" };
+  // constructor(props) {
+  //   super(props);
+  //   this.state = { lat: null, errMessage: "" };
+  // }
+
+  //state initialization
+  state = { lat: null, errMessage: "" };
+
+  //component lifecycle methods
+  componentDidMount() {
     window.navigator.geolocation.getCurrentPosition(
-      (position) => {
-        //to update state object
-        this.setState({ lat: position.coords.latitude });
-        console.log(position.coords.latitude);
-      },
+      (position) => this.setState({ lat: position.coords.latitude }),
       (err) => this.setState({ errMessage: err.message })
     );
   }
+
   //React says we have to define render!!!!
   render() {
     if (this.state.errMessage && !this.state.lat) {
