@@ -30,7 +30,7 @@ class App extends React.Component {
     if (this.state.errMessage && !this.state.lat) {
       return <div>Error: {this.state.errMessage}</div>;
     } else if (!this.state.errMessage && this.state.lat) {
-      return <div>Latitude: {this.state.lat}</div>;
+      return <SeasonDisplay lat={this.state.lat} />;
     } else {
       return <div>Loading!!!</div>;
     }
